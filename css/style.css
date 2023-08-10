@@ -1,0 +1,131 @@
+.circle {
+  width: 60px;
+  height: 60px;
+  background-color: aqua;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  margin: 5px;
+  border: #6F6F6F solid 4px;
+  color: white;
+  background-color: black;
+  font-weight: 700;
+  font-size: 30px;
+  position: relative;
+
+}
+.circle.active{
+  border:none;
+  background-color: green;
+}
+.circle.active p{
+  display: none;
+}
+.circle.active span{
+  display: flex;
+}
+.circles{
+  width: 40%;
+  display: flex;
+  justify-content: space-around;
+  position: relative;
+  overflow: hidden;
+  
+}
+.circle::before{
+  content:" ";
+  display: block;
+  height: 3px;
+  width: 78px;
+  position: absolute;
+  top: 50%;
+  left: 52px;
+  background: #6F6F6F;
+
+}
+.circle.active::before {
+background:#008000;
+}
+
+span{
+  display: none;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.btn {
+  background-color: #008000;
+  border-radius: 10px;
+  font-size: 25px;
+  color: white;
+}
+.btn:hover {
+  background-color: white;
+  border: #008000 solid 2px;
+  color: #008000;
+}
+@media all and (max-width: 600px){
+/*Big smartphones [426px -> 600px]*/
+.circle{
+  overflow: hidden;
+  width: 60px;
+  height: 60px;
+  /* padding: 10px; */
+
+}
+.circles{
+  width: 60%;
+  position: relative;
+}
+.circle::before{
+  /* content:" "; */
+  /* display: block; */
+  height: 30px;
+  width: 780px;
+  position: absolute;
+  top: 50%;
+  /* left: 52px; */
+  background: #6F6F6F;
+
+}
+.btns{
+  display: flex;
+  flex-direction: column;
+}
+.btn{
+  margin-bottom: 15px;
+}
+}
+@media only screen and (max-width: 425px){
+/*Small smartphones [325px -> 425px]*/
+.circle{
+  overflow: hidden;
+  width: 60px;
+  height: 60px;
+  /* padding: 10px; */
+
+}
+.circles{
+  width: 100%;
+  position: relative ;
+}
+.circle::before{
+  content:" " ;
+  display: block ;
+  height: 30px ;
+  width: 780px ;
+  position: absolute ;
+  /* top: 50%; */
+  /* left: 52px; */
+  background-color: blue;
+
+}
+.btns{
+  display: flex;
+  flex-direction: column;
+}
+.btn{
+  margin-bottom: 15px;
+}
+}
